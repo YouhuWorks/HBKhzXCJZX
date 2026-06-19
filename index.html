@@ -2,8 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 移动端强制禁止缩放，校园官网规范 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>湖北口回族乡初级中学 官网首页</title>
     <style>
         * {
@@ -16,18 +15,18 @@
         body {
             background: #ffffff;
             font-family: "Microsoft YaHei", SimSun, serif;
+            min-width: 1200px;
         }
 
-        /* 顶部导航栏 公办学校深蓝标准样式 */
+        /* 顶部红色渐变导航栏 */
         .top-nav {
             width: 100%;
-            background-color: #003473;
+            background: linear-gradient(90deg, #b20000, #d81e06, #b20000);
         }
         .nav-wrap {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
         }
         .nav-wrap a {
@@ -38,17 +37,17 @@
             transition: background 0.25s ease;
         }
         .nav-wrap a:hover {
-            background-color: #0052b8;
+            background-color: rgba(255,255,255,0.2);
         }
 
-        /* 顶部横幅大图（校徽校名航拍公办标一体化图片） */
+        /* 顶部横幅大图 */
         .banner-box img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* 通用板块统一样式：简介/校园动态/红色板块共用 */
+        /* 学校简介图片模块 */
         .block-item {
             width: 100%;
             margin-top: 8px;
@@ -59,44 +58,286 @@
             display: block;
         }
 
-        /* 参考图底部灰色空白占位区域 */
+        /* 校园动态红色渐变外层容器 */
+        .news-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 12px auto 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #c41010, #e02424);
+            border-radius: 8px;
+        }
+        .news-title {
+            font-size: 34px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 6px;
+            text-shadow: 1px 1px 3px #700000;
+            margin-bottom: 25px;
+            text-align: center;
+            font-family: "KaiTi", "Microsoft YaHei", serif;
+        }
+
+        /* 资讯卡片容器：一行2个 */
+        .news-card-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        /* 单条资讯卡片（对标参考图样式） */
+        .info-card {
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+        }
+        /* 卡片顶部红色图区：无图片自动填充红色渐变底色，取消文字提示 */
+        .card-img-box {
+            width: 100%;
+            height: 220px;
+            /* 空白图片默认红色渐变背景，统一美观 */
+            background: linear-gradient(135deg, #b80c0c, #e62020);
+            position: relative;
+        }
+        .card-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        /* 卡片下方文字区域 */
+        .card-text-area {
+            padding: 22px 20px;
+            position: relative;
+        }
+        .card-title {
+            font-size: 20px;
+            color: #222;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card-title::before {
+            content: "";
+            width: 10px;
+            height: 18px;
+            background: #d81e06;
+            display: inline-block;
+        }
+        .card-title:empty::after {
+            content: "标题待补充";
+            color: #999;
+        }
+        .card-desc {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+            min-height: 80px;
+            margin-bottom: 15px;
+        }
+        .card-desc:empty::after {
+            content: "内容待补充";
+            color: #bbb;
+        }
+        .card-date {
+            font-size: 14px;
+            color: #c82423;
+            margin-bottom: 16px;
+        }
+        /* 右下角查看按钮 */
+        .look-btn {
+            display: block;
+            width: 90px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            color: #333;
+            font-size: 14px;
+            position: absolute;
+            right: 20px;
+            bottom: 22px;
+            transition: 0.2s;
+        }
+        .look-btn:hover {
+            background: #d81e06;
+            color: #fff;
+            border-color: #d81e06;
+        }
+
+        /* 底部灰色空白占位 */
         .empty-gray-area {
             width: 100%;
             height: 300px;
             background-color: #e9e9eb;
             margin-top: 10px;
         }
-
-        /* 移动端导航适配缩小 */
-        @media (max-width: 768px) {
-            .nav-wrap a {
-                font-size: 14px;
-                padding: 12px 14px;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- 顶部导航栏 -->
+<!-- ====================== 【统一跳转链接配置区】集中管理所有卡片链接，修改只改这里 ======================
+第1条资讯链接：href="detail1.html"
+第2条资讯链接：href="detail2.html"
+第3条资讯链接：href="detail3.html"
+第4条资讯链接：href="detail4.html"
+第5条资讯链接：href="detail5.html"
+第6条资讯链接：href="detail6.html"
+第7条资讯链接：href="detail7.html"
+第8条资讯链接：href="detail8.html"
+第9条资讯链接：href="detail9.html"
+第10条资讯链接：href="detail10.html"
+================================================================================================= -->
+
+    <!-- 顶部红色渐变导航栏 -->
     <div class="top-nav">
         <div class="nav-wrap">
             <a href="#">首页</a>
             <a href="#intro">学校简介</a>
             <a href="#news">校园动态</a>
-            <a href="#red1">红色文化课堂</a>
-            <a href="#red2">民族团结红色研学</a>
             <a href="#">师资力量</a>
             <a href="#">教学教研</a>
             <a href="#">联系我们</a>
         </div>
     </div>
 
-    <!-- 1. 顶部一体化大图：校徽+校名+拼音英文+航拍+右上角公办斜标（和参考图完全对应） -->
+    <!-- 顶部一体化横幅大图 -->
     <div class="banner-box">
         <img src="header_all.png" alt="学校顶部全景横幅">
     </div>
 
-    <!-- 2. 学校简介完整板块图（参考图里简介区域整块图片） -->
+    <!-- 学校简介图片板块 -->
+    <div class="block-item" id="intro">
+        <img src="intro_block.png" alt="学校简介板块">
+    </div>
+
+    <!-- 校园动态红色板块（无分类，纯资讯卡片，一行2个，共10条，时间从上到下由新到旧） -->
+    <div class="news-section" id="news">
+        <h2 class="news-title">校园动态</h2>
+        <div class="news-card-wrap">
+            <!-- 第1条（最新日期） -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news1.jpg" alt="资讯配图">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">我校开展端午红色主题班会活动</h3>
+                    <p class="card-desc">端午佳节来临，各班组织红色主题班会，结合革命老区历史与传统民俗，促进回汉学生文化交融，厚植爱国情怀。</p>
+                    <div class="card-date">发布时间：2026-06-19</div>
+                    <a href="detail1.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第2条 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news2.jpg" alt="资讯配图">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">郧西县教育局莅临我校开展教学督导检查</h3>
+                    <p class="card-desc">县教育局专家组入校听课、查阅教学资料，对我校民族特色办学、素质教育落实工作给予充分肯定。</p>
+                    <div class="card-date">发布时间：2026-06-15</div>
+                    <a href="detail2.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第3条 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news3.jpg" alt="资讯配图">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">回汉学生民族团结书画展在校大厅顺利举办</h3>
+                    <p class="card-desc">全校师生踊跃投稿，书画作品融合回族文化、红色革命元素，展现各族学子同心向党的精神风貌。</p>
+                    <div class="card-date">发布时间：2026-06-10</div>
+                    <a href="detail3.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第4条 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news4.jpg" alt="资讯配图">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">九年级中考冲刺动员大会圆满召开</h3>
+                    <p class="card-desc">校领导、毕业班教师为初三学子加油鼓劲，树立备考目标，鼓舞全体学生奋勇争先，再创中考佳绩。</p>
+                    <div class="card-date">发布时间：2026-06-05</div>
+                    <a href="detail4.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第5条 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news5.jpg" alt="资讯配图">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">校园运动会暨民族趣味活动精彩落幕</h3>
+                    <p class="card-desc">设置多个民族特色趣味项目，回汉学生同台竞技，增强集体凝聚力，丰富校园文体生活。</p>
+                    <div class="card-date">发布时间：2026-06-01</div>
+                    <a href="detail5.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第6条（空白待填充） -->
+            <div class="info-card">
+                <div class="card-img-box"></div>
+                <div class="card-text-area">
+                    <h3 class="card-title"></h3>
+                    <p class="card-desc"></p>
+                    <div class="card-date">发布时间：2026-05-26</div>
+                    <a href="detail6.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第7条（空白待填充） -->
+            <div class="info-card">
+                <div class="card-img-box"></div>
+                <div class="card-text-area">
+                    <h3 class="card-title"></h3>
+                    <p class="card-desc"></p>
+                    <div class="card-date">发布时间：2026-05-20</div>
+                    <a href="detail7.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第8条（空白待填充） -->
+            <div class="info-card">
+                <div class="card-img-box"></div>
+                <div class="card-text-area">
+                    <h3 class="card-title"></h3>
+                    <p class="card-desc"></p>
+                    <div class="card-date">发布时间：2026-05-12</div>
+                    <a href="detail8.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第9条（空白待填充） -->
+            <div class="info-card">
+                <div class="card-img-box"></div>
+                <div class="card-text-area">
+                    <h3 class="card-title"></h3>
+                    <p class="card-desc"></p>
+                    <div class="card-date">发布时间：2026-05-06</div>
+                    <a href="detail9.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第10条（空白待填充，时间最早） -->
+            <div class="info-card">
+                <div class="card-img-box"></div>
+                <div class="card-text-area">
+                    <h3 class="card-title"></h3>
+                    <p class="card-desc"></p>
+                    <div class="card-date">发布时间：2026-04-28</div>
+                    <a href="detail10.html" class="look-btn">查看</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部灰色空白占位 -->
+    <div class="empty-gray-area"></div>
+</body>
+</html>
     <div class="block-item" id="intro">
         <img src="intro_block.png" alt="学校简介板块">
     </div>
