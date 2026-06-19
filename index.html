@@ -18,10 +18,10 @@
             min-width: 1200px;
         }
 
-        /* 顶部红色渐变导航栏 */
+        /* 顶部导航栏：淡天空蓝色渐变，青春活力风格 */
         .top-nav {
             width: 100%;
-            background: linear-gradient(90deg, #b20000, #d81e06, #b20000);
+            background: linear-gradient(90deg, #74b9ff, #a8d8ff, #74b9ff);
         }
         .nav-wrap {
             max-width: 1200px;
@@ -30,14 +30,14 @@
             justify-content: center;
         }
         .nav-wrap a {
-            color: #fff;
+            color: #002449;
             font-size: 16px;
             padding: 14px 20px;
             display: block;
             transition: background 0.25s ease;
         }
         .nav-wrap a:hover {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.35);
         }
 
         /* 顶部横幅大图 */
@@ -58,21 +58,21 @@
             display: block;
         }
 
-        /* 校园动态红色渐变外层容器 */
+        /* 校园动态外层容器：浅灰色底色 */
         .news-section {
             width: 100%;
             max-width: 1200px;
             margin: 12px auto 0;
             padding: 30px;
-            background: linear-gradient(135deg, #c41010, #e02424);
+            background: #eeeeee;
             border-radius: 8px;
         }
         .news-title {
             font-size: 34px;
             font-weight: bold;
-            color: #ffffff;
+            color: #b20000;
             letter-spacing: 6px;
-            text-shadow: 1px 1px 3px #700000;
+            text-shadow: 1px 1px 2px #cccccc;
             margin-bottom: 25px;
             text-align: center;
             font-family: "KaiTi", "Microsoft YaHei", serif;
@@ -96,11 +96,10 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.25);
         }
-        /* 卡片顶部红色图区：无图片自动填充红色渐变底色，取消文字提示 */
+        /* 卡片顶部红色图区：无图片自动填充红色渐变底色 */
         .card-img-box {
             width: 100%;
             height: 220px;
-            /* 空白图片默认红色渐变背景，统一美观 */
             background: linear-gradient(135deg, #b80c0c, #e62020);
             position: relative;
         }
@@ -130,20 +129,12 @@
             background: #d81e06;
             display: inline-block;
         }
-        .card-title:empty::after {
-            content: "标题待补充";
-            color: #999;
-        }
         .card-desc {
             font-size: 15px;
             color: #666;
             line-height: 1.7;
             min-height: 80px;
             margin-bottom: 15px;
-        }
-        .card-desc:empty::after {
-            content: "内容待补充";
-            color: #bbb;
         }
         .card-date {
             font-size: 14px;
@@ -193,9 +184,19 @@
 第8条资讯链接：href="detail8.html"
 第9条资讯链接：href="detail9.html"
 第10条资讯链接：href="detail10.html"
+第11条资讯链接：href="detail11.html"
+第12条资讯链接：href="detail12.html"
+第13条资讯链接：href="detail13.html"
+第14条资讯链接：href="detail14.html"
+第15条资讯链接：href="detail15.html"
+第16条资讯链接：href="detail16.html"
+第17条资讯链接：href="detail17.html"
+第18条资讯链接：href="detail18.html"
+第19条资讯链接：href="detail19.html"
+第20条资讯链接：href="detail20.html"
 ================================================================================================= -->
 
-    <!-- 顶部红色渐变导航栏 -->
+    <!-- 顶部淡天空蓝色渐变导航栏 -->
     <div class="top-nav">
         <div class="nav-wrap">
             <a href="#">首页</a>
@@ -212,152 +213,259 @@
         <img src="header_all.png" alt="学校顶部全景横幅">
     </div>
 
-    <!-- 学校简介图片板块 -->
+    <!-- 学校简介图片板块（仅保留唯一一处） -->
     <div class="block-item" id="intro">
         <img src="intro_block.png" alt="学校简介板块">
     </div>
 
-    <!-- 校园动态红色板块（无分类，纯资讯卡片，一行2个，共10条，时间从上到下由新到旧） -->
+    <!-- 校园动态板块（浅灰色底色，扩容至20张卡片，全部带img标签，修复图片显示bug） -->
     <div class="news-section" id="news">
         <h2 class="news-title">校园动态</h2>
         <div class="news-card-wrap">
-            <!-- 第1条（最新日期） -->
+            <!-- 第1条（最新日期 2026-06-19） -->
             <div class="info-card">
                 <div class="card-img-box">
-                    <img src="news1.jpg" alt="资讯配图">
+                    <img src="news1.jpg" alt="端午红色主题班会">
                 </div>
                 <div class="card-text-area">
                     <h3 class="card-title">我校开展端午红色主题班会活动</h3>
-                    <p class="card-desc">端午佳节来临，各班组织红色主题班会，结合革命老区历史与传统民俗，促进回汉学生文化交融，厚植爱国情怀。</p>
+                    <p class="card-desc">端午佳节来临，各班组织红色主题班会，结合本地革命老区历史与传统民俗，融合回族端午习俗开展分享交流，促进回汉学生文化交融，厚植全体学子爱国情怀。</p>
                     <div class="card-date">发布时间：2026-06-19</div>
                     <a href="detail1.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第2条 -->
+            <!-- 第2条 2026-06-15 -->
             <div class="info-card">
                 <div class="card-img-box">
-                    <img src="news2.jpg" alt="资讯配图">
+                    <img src="news2.jpg" alt="教育局教学督导检查">
                 </div>
                 <div class="card-text-area">
                     <h3 class="card-title">郧西县教育局莅临我校开展教学督导检查</h3>
-                    <p class="card-desc">县教育局专家组入校听课、查阅教学资料，对我校民族特色办学、素质教育落实工作给予充分肯定。</p>
+                    <p class="card-desc">县教育局专家组入校随堂听课、查阅教学台账与特色课程资料，重点调研我校民族教育、红色素质教育落实情况，对我校办学成效给予充分肯定。</p>
                     <div class="card-date">发布时间：2026-06-15</div>
                     <a href="detail2.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第3条 -->
+            <!-- 第3条 2026-06-10 -->
             <div class="info-card">
                 <div class="card-img-box">
-                    <img src="news3.jpg" alt="资讯配图">
+                    <img src="news3.jpg" alt="民族团结书画展">
                 </div>
                 <div class="card-text-area">
                     <h3 class="card-title">回汉学生民族团结书画展在校大厅顺利举办</h3>
-                    <p class="card-desc">全校师生踊跃投稿，书画作品融合回族文化、红色革命元素，展现各族学子同心向党的精神风貌。</p>
+                    <p class="card-desc">全校师生踊跃投稿参展，书画作品融合回族民俗文化、红色革命历史元素，生动展现各族学子同心向党、团结共进的精神风貌。</p>
                     <div class="card-date">发布时间：2026-06-10</div>
                     <a href="detail3.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第4条 -->
+            <!-- 第4条 2026-06-05 -->
             <div class="info-card">
                 <div class="card-img-box">
-                    <img src="news4.jpg" alt="资讯配图">
+                    <img src="news4.jpg" alt="中考动员大会">
                 </div>
                 <div class="card-text-area">
                     <h3 class="card-title">九年级中考冲刺动员大会圆满召开</h3>
-                    <p class="card-desc">校领导、毕业班教师为初三学子加油鼓劲，树立备考目标，鼓舞全体学生奋勇争先，再创中考佳绩。</p>
+                    <p class="card-desc">校领导、毕业班全体教师为初三学子加油鼓劲，梳理备考规划，树立冲刺目标，鼓舞全体学生奋勇争先，力争再创我校中考优良成绩。</p>
                     <div class="card-date">发布时间：2026-06-05</div>
                     <a href="detail4.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第5条 -->
+            <!-- 第5条 2026-06-01 -->
             <div class="info-card">
                 <div class="card-img-box">
-                    <img src="news5.jpg" alt="资讯配图">
+                    <img src="news5.jpg" alt="校园民族趣味运动会">
                 </div>
                 <div class="card-text-area">
                     <h3 class="card-title">校园运动会暨民族趣味活动精彩落幕</h3>
-                    <p class="card-desc">设置多个民族特色趣味项目，回汉学生同台竞技，增强集体凝聚力，丰富校园文体生活。</p>
+                    <p class="card-desc">运动会设置多个回族特色趣味竞技项目，回汉学生同台比拼、互帮互助，有效增强班级集体凝聚力，丰富校园文体实践生活。</p>
                     <div class="card-date">发布时间：2026-06-01</div>
                     <a href="detail5.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第6条（空白待填充） -->
+            <!-- 第6条 2026-05-26 【修复：保留img标签，不会丢失图片渲染】 -->
             <div class="info-card">
-                <div class="card-img-box"></div>
+                <div class="card-img-box">
+                    <img src="news6.jpg" alt="红色研学实践活动">
+                </div>
                 <div class="card-text-area">
-                    <h3 class="card-title"></h3>
-                    <p class="card-desc"></p>
+                    <h3 class="card-title">红色研学实践活动走进本地革命旧址</h3>
+                    <p class="card-desc">我校组织七八年级学生前往周边红色革命旧址开展研学实践，聆听革命先辈事迹，实地感悟老区红色精神，落实红色文化育人办学特色。</p>
                     <div class="card-date">发布时间：2026-05-26</div>
                     <a href="detail6.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第7条（空白待填充） -->
+            <!-- 第7条 2026-05-20 -->
             <div class="info-card">
-                <div class="card-img-box"></div>
+                <div class="card-img-box">
+                    <img src="news7.jpg" alt="民族团结师德学习会">
+                </div>
                 <div class="card-text-area">
-                    <h3 class="card-title"></h3>
-                    <p class="card-desc"></p>
+                    <h3 class="card-title">民族团结主题师德专题学习会开展</h3>
+                    <p class="card-desc">全体教职工开展民族团结教育专题学习，深入学习民族教育相关政策，提升教师民族融合教学能力，打造和谐包容育人环境。</p>
                     <div class="card-date">发布时间：2026-05-20</div>
                     <a href="detail7.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第8条（空白待填充） -->
+            <!-- 第8条 2026-05-12 -->
             <div class="info-card">
-                <div class="card-img-box"></div>
+                <div class="card-img-box">
+                    <img src="news8.jpg" alt="防溺水安全教育">
+                </div>
                 <div class="card-text-area">
-                    <h3 class="card-title"></h3>
-                    <p class="card-desc"></p>
+                    <h3 class="card-title">校园防溺水安全专题教育全覆盖</h3>
+                    <p class="card-desc">学校开展防溺水安全系列教育，通过主题班会、安全讲座、家校告知书等形式，全方位筑牢学生夏季安全防护防线。</p>
                     <div class="card-date">发布时间：2026-05-12</div>
                     <a href="detail8.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第9条（空白待填充） -->
+            <!-- 第9条 2026-05-06 -->
             <div class="info-card">
-                <div class="card-img-box"></div>
+                <div class="card-img-box">
+                    <img src="news9.jpg" alt="优质公开课评比">
+                </div>
                 <div class="card-text-area">
-                    <h3 class="card-title"></h3>
-                    <p class="card-desc"></p>
+                    <h3 class="card-title">校内优质公开课教学评比活动顺利举办</h3>
+                    <p class="card-desc">全校各学科教师开展公开课评比，互相听课评课，交流特色教学方法，持续提升我校整体课堂教学质量与教研水平。</p>
                     <div class="card-date">发布时间：2026-05-06</div>
                     <a href="detail9.html" class="look-btn">查看</a>
                 </div>
             </div>
-            <!-- 第10条（空白待填充，时间最早） -->
+            <!-- 第10条 2026-04-28 -->
             <div class="info-card">
-                <div class="card-img-box"></div>
+                <div class="card-img-box">
+                    <img src="news10.jpg" alt="五四入团朗诵比赛">
+                </div>
                 <div class="card-text-area">
-                    <h3 class="card-title"></h3>
-                    <p class="card-desc"></p>
+                    <h3 class="card-title">五四青年节入团仪式暨红色朗诵比赛</h3>
+                    <p class="card-desc">我校举办新团员入团仪式，同步开展红色经典朗诵比赛，青年学子诵读革命诗文，传承红色基因，献礼五四青年节。</p>
                     <div class="card-date">发布时间：2026-04-28</div>
                     <a href="detail10.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第11条 2026-04-22 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news11.jpg" alt="世界地球日环保活动">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">世界地球日环保主题实践活动顺利开展</h3>
+                    <p class="card-desc">各班开展环保主题实践，组织校园清洁、垃圾分类科普，引导学生树立绿色环保理念，践行文明校园生活。</p>
+                    <div class="card-date">发布时间：2026-04-22</div>
+                    <a href="detail11.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第12条 2026-04-15 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news12.jpg" alt="家长开放日活动">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">春季家长开放日活动圆满落幕</h3>
+                    <p class="card-desc">邀请家长入校随堂听课、参观校园特色课程展示，搭建家校沟通桥梁，同步宣传民族团结与红色育人办学特色。</p>
+                    <div class="card-date">发布时间：2026-04-15</div>
+                    <a href="detail12.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第13条 2026-04-08 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news13.jpg" alt="校园图书阅读月">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">校园红色图书阅读月正式启动</h3>
+                    <p class="card-desc">学校图书室增设红色革命、民族文化类书籍，开展读书分享会、征文比赛，营造书香红色校园氛围。</p>
+                    <div class="card-date">发布时间：2026-04-08</div>
+                    <a href="detail13.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第14条 2026-04-01 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news14.jpg" alt="法治安全教育讲座">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">法治副校长入校开展校园法治安全教育讲座</h3>
+                    <p class="card-desc">法治副校长围绕未成年人保护、校园欺凌防范、交通安全开展宣讲，提升全体学生法治安全意识。</p>
+                    <div class="card-date">发布时间：2026-04-01</div>
+                    <a href="detail14.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第15条 2026-03-24 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news15.jpg" alt="结核病防治科普">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">春季传染病暨结核病防治科普进校园</h3>
+                    <p class="card-desc">卫生院医护人员入校开展健康科普，讲解春季传染病预防知识，规范校园卫生消杀与学生健康监测工作。</p>
+                    <div class="card-date">发布时间：2026-03-24</div>
+                    <a href="detail15.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第16条 2026-03-18 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news16.jpg" alt="学雷锋志愿服务">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">学雷锋志愿服务：学子走进乡村关爱老人</h3>
+                    <p class="card-desc">我校团员学生前往周边乡村开展敬老志愿服务，传承雷锋精神，展现回汉学子友善互助的良好风貌。</p>
+                    <div class="card-date">发布时间：2026-03-18</div>
+                    <a href="detail16.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第17条 2026-03-10 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news17.jpg" alt="三八妇女节教师慰问">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">三八妇女节慰问全体女教职工，致敬巾帼园丁</h3>
+                    <p class="card-desc">学校开展三八妇女节慰问活动，为全体女教师送上暖心礼品，表彰优秀女教师在民族教育工作中的突出贡献。</p>
+                    <div class="card-date">发布时间：2026-03-10</div>
+                    <a href="detail17.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第18条 2026-03-03 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news18.jpg" alt="春季开学第一课">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">2026春季开学第一课：红色传承与民族团结教育</h3>
+                    <p class="card-desc">开学第一课围绕老区红色历史、回汉民族团结开展授课，引导学生树立爱国、团结、奋进的成长目标。</p>
+                    <div class="card-date">发布时间：2026-03-03</div>
+                    <a href="detail18.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第19条 2026-02-25 -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news19.jpg" alt="春季教师教研培训会">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">春季开学教师教研能力提升专题培训会</h3>
+                    <p class="card-desc">全体教师参与春季教研培训，聚焦民族特色课堂、红色课程开发开展交流学习，夯实新学期教学基础。</p>
+                    <div class="card-date">发布时间：2026-02-25</div>
+                    <a href="detail19.html" class="look-btn">查看</a>
+                </div>
+            </div>
+            <!-- 第20条（最早日期 2026-02-20） -->
+            <div class="info-card">
+                <div class="card-img-box">
+                    <img src="news20.jpg" alt="校园安全隐患排查">
+                </div>
+                <div class="card-text-area">
+                    <h3 class="card-title">开学前全校校园安全隐患全面排查整治</h3>
+                    <p class="card-desc">后勤与安保团队对教学楼、宿舍、食堂、运动场地开展全覆盖安全排查，整改各类隐患，保障春季开学平稳有序。</p>
+                    <div class="card-date">发布时间：2026-02-20</div>
+                    <a href="detail20.html" class="look-btn">查看</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- 底部灰色空白占位 -->
-    <div class="empty-gray-area"></div>
-</body>
-</html>
-    <div class="block-item" id="intro">
-        <img src="intro_block.png" alt="学校简介板块">
-    </div>
-
-    <!-- 3. 新增板块1：校园动态 -->
-    <div class="block-item" id="news">
-        <img src="campus_news.png" alt="校园动态板块">
-    </div>
-
-    <!-- 4. 新增板块2：红色主题一 红色文化传承 -->
-    <div class="block-item" id="red1">
-        <img src="red_theme_1.png" alt="红色文化课堂板块">
-    </div>
-
-    <!-- 5. 新增板块3：红色主题二 回汉民族团结红色实践 -->
-    <div class="block-item" id="red2">
-        <img src="red_theme_2.png" alt="民族团结红色研学板块">
-    </div>
-
-    <!-- 参考图同款底部灰色空白区域 -->
     <div class="empty-gray-area"></div>
 </body>
 </html>
