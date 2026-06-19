@@ -2,160 +2,121 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 加这行，手机端适配更友好 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AOH2 新轴心 MOD</title>
+    <!-- 移动端强制禁止缩放，校园官网规范 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>湖北口回族乡初级中学 官网首页</title>
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: "微软雅黑",sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
         }
-        html{
-            width:100%!important;
-            /* 删掉了强制最小宽度 */
+        body {
+            background: #ffffff;
+            font-family: "Microsoft YaHei", SimSun, serif;
         }
-        body{
-            background:#1a1a1a;
-            color:#fff;
-            line-height:1.6;
-            /* 删掉了强制最小宽度 */
+
+        /* 顶部导航栏 公办学校深蓝标准样式 */
+        .top-nav {
+            width: 100%;
+            background-color: #003473;
         }
-        .header{
-            background:#222;
-            padding:20px;
-            text-align:center;
-            border-bottom:2px solid #3498db;
+        .nav-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .header h1{
-            font-size:28px;
-            color:#3498db;
+        .nav-wrap a {
+            color: #fff;
+            font-size: 16px;
+            padding: 14px 20px;
+            display: block;
+            transition: background 0.25s ease;
         }
-        .header p{
-            margin-top:5px;
-            color:#ccc;
-            font-size:16px;
+        .nav-wrap a:hover {
+            background-color: #0052b8;
         }
-        .container{
-            width:100%;
-            max-width:1000px;
-            margin:auto;
-            padding:20px;
+
+        /* 顶部横幅大图（校徽校名航拍公办标一体化图片） */
+        .banner-box img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
-        .box{
-            background:#2d2d2d;
-            border-radius:8px;
-            padding:25px;
-            margin-bottom:20px;
-            border-left:4px solid #3498db;
+
+        /* 通用板块统一样式：简介/校园动态/红色板块共用 */
+        .block-item {
+            width: 100%;
+            margin-top: 8px;
         }
-        .box h2{
-            color:#3498db;
-            margin-bottom:15px;
-            font-size:22px;
+        .block-item img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
-        .box p{
-            color:#ddd;
-            font-size:15px;
-            margin-bottom:8px;
+
+        /* 参考图底部灰色空白占位区域 */
+        .empty-gray-area {
+            width: 100%;
+            height: 300px;
+            background-color: #e9e9eb;
+            margin-top: 10px;
         }
-        .qq-group-wrap{
-            display:flex;
-            justify-content:center;
-            gap:30px;
-            margin-top:10px;
-            flex-wrap:wrap;
-            /* 改成wrap，手机端群聊按钮自动换行 */
-        }
-        .qq-group-item{
-            text-align:center;
-            margin:10px 0;
-        }
-        .qq-group-name{
-            font-size:16px;
-            margin-bottom:10px;
-            font-weight:bold;
-        }
-        .qq-btn{
-            display:inline-block;
-            padding:12px 30px;
-            background:#3498db;
-            color:#fff;
-            border-radius:6px;
-            text-decoration:none;
-            font-size:15px;
-            transition:background 0.3s ease;
-        }
-        .qq-btn:hover{
-            background:#2980b9;
-        }
-        .footer{
-            text-align:center;
-            padding:25px;
-            background:#222;
-            color:#999;
-            font-size:14px;
-            width:100%;
+
+        /* 移动端导航适配缩小 */
+        @media (max-width: 768px) {
+            .nav-wrap a {
+                font-size: 14px;
+                padding: 12px 14px;
+            }
         }
     </style>
 </head>
 <body>
-<div class="header">
-    <h1>新轴心MOD</h1>
-    <p>AOH2 原创MOD</p>
-</div>
-<div class="container">
-<div class="box">
-    <h2>MOD介绍</h2>
-    <p>AOH2新轴心MOD是一款历史向以崛起轴心国为核心的MOD，包含历史上德国的扩张历程与轴心国取得二战胜利的架空史剧情，在这里你将成为历史的操控者，带领德国/（其他国家）走向胜利！</p>
-</div>
-<div class="box">
-    <h2>MOD特色</h2>
-    <p>：体验 1936中德意新轴心的瓜分世界之旅 （十分建议等1.0版本出后再玩）</p>
-    <p>南京：在东方 沉睡的巨龙因常凯申的忽然离世而陷入了动荡 此时军国主义的日本手持军刀磨刀霍霍... 东北的沦陷让全民族陷入了最危急的时候 民族存亡之际 中国必须要做出她的抉择</p>
-    <p>柏林：来自柏林的元首对凡尔赛条约束缚下的德意志感到愤怒 然而英法已经虚弱 纳粹党已经掌控德国政权并稳固了元首的绝对权威 现在是时候为帝国挣脱枷锁的第一步谋划了...</p>
-  <p>罗马：第一次世界大战 不仅使得意大利经济崩溃 作为战胜者的他在谈判桌上却无力与列强争论 如今已是墨索里尼进军罗马十余年之时 谈判桌上拿不到的 意大利必须通过战争夺取</p>
-<p>.........</p>
-</div>
-<div class="box">
-    <h2>更新日志</h2>
-    <p>当前最新版本号V 0.33</p>
-   
-<p>【2025.09.01】新轴心MOD立项 开始制作</p>
-<p>【2025.09.23】 新轴心0.1版本开启小规模测试</p>
-<p>【2025.10】 优化版本细节，UI风格</p>
-<p> 【2025.11.06】 “新轴心V0.2测试版”正式发布 更新了德国大量内容 游戏剧本事件数量增加至500+</p>
-<p>【2025.11.15】新轴心V0.21测试版发布，修复已知问题，撰写后续文本</p>
-<p>【2025.11.26】新轴心V0.22测试版补丁 与0.23扩展发布</p>
-<p>【2026.01.11】 “新轴心V0.3-寸血山河”版本发布 新增中国黑线与历史线的游玩内容 事件增至900+</p>
-<p>【2026.02.10】新轴心V0.31补丁更新，修复大多数已知问题</p>
-<p>【2026.02.15】新轴心V0.32版本发布，部分事件补充完善</p>
-<p>【2026.02.26】新轴心V0.33版本发布新增部分意大利事件 事件增至1000+</p>
-<p>【2026.02.27】新轴心制作组 通过并确定1.0版本的更新内容为 意大利游玩内容、苏联游玩内容 以及中国游玩内容的进一步完善与扩展</p>
-<p>【2026.03.10】更新小版本bug问题修复优化</p>
-<p>【2026.04.01】 “新轴心V1.0版本-凯撒归来”开启制作组内部测试并逐步优化现存问题</p>
-   
-</div>
-<div class="box">
-    <h2>联系我们</h2>
-    <p>MOD作者:“f洗头佬”</p>
-    <p>下载：</p>
-    <br>
-    <div class="qq-group-wrap">
-        <div class="qq-group-item">
-            <p class="qq-group-name">【C.C】【团结协定】奥斯特兰</p>
-            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=gfNCtZNToodFrlWlDpVWXfoJXNlS5SG7&authKey=EtRDY8RkU%2FS%2BiWDxnhbBVIJ1vuxsDnDA3LrWz91GsexBgE%2FEvDTLGBThNAIDw11i&noverify=0&group_code=1032737783" target="_blank" class="qq-btn">加入群聊</a>
-        </div>
-        <div class="qq-group-item">
-            <p class="qq-group-name">【C.C】【团结协定】阿非利加</p>
-            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=g2-qbD1ply91zKyX5Qai8EdeBb6xwq9c&authKey=HeGcke2ZL20ZfS3IcsutSnfRJE25BxVi8ghY38bX2gcj%2BgPe4nbTucLuiWnNvpqY&noverify=0&group_code=603237134" target="_blank" class="qq-btn">加入群聊</a>
+    <!-- 顶部导航栏 -->
+    <div class="top-nav">
+        <div class="nav-wrap">
+            <a href="#">首页</a>
+            <a href="#intro">学校简介</a>
+            <a href="#news">校园动态</a>
+            <a href="#red1">红色文化课堂</a>
+            <a href="#red2">民族团结红色研学</a>
+            <a href="#">师资力量</a>
+            <a href="#">教学教研</a>
+            <a href="#">联系我们</a>
         </div>
     </div>
-</div>
-</div>
-<div class="footer">
-   ©2026 AOH2新轴心MOD X 新轴心制作组 版权所有
-</div>
+
+    <!-- 1. 顶部一体化大图：校徽+校名+拼音英文+航拍+右上角公办斜标（和参考图完全对应） -->
+    <div class="banner-box">
+        <img src="header_all.png" alt="学校顶部全景横幅">
+    </div>
+
+    <!-- 2. 学校简介完整板块图（参考图里简介区域整块图片） -->
+    <div class="block-item" id="intro">
+        <img src="intro_block.png" alt="学校简介板块">
+    </div>
+
+    <!-- 3. 新增板块1：校园动态 -->
+    <div class="block-item" id="news">
+        <img src="campus_news.png" alt="校园动态板块">
+    </div>
+
+    <!-- 4. 新增板块2：红色主题一 红色文化传承 -->
+    <div class="block-item" id="red1">
+        <img src="red_theme_1.png" alt="红色文化课堂板块">
+    </div>
+
+    <!-- 5. 新增板块3：红色主题二 回汉民族团结红色实践 -->
+    <div class="block-item" id="red2">
+        <img src="red_theme_2.png" alt="民族团结红色研学板块">
+    </div>
+
+    <!-- 参考图同款底部灰色空白区域 -->
+    <div class="empty-gray-area"></div>
 </body>
 </html>
